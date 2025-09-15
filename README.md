@@ -1,24 +1,32 @@
-## Honor
+# SatyaRoom
 
-This project is listed on [portfolio-ideas](https://github.com/Evavic44/portfolio-ideas) repo(1.7k stars).
+Proyek ini adalah ruangan virtual 3D yang dibuat dengan **Three.js + TypeScript + Blender**.  
+Saya buat sebagai cara unik untuk memperkenalkan website/blog saya.  
 
-![image](https://user-images.githubusercontent.com/51329156/209019107-d0ccdbaf-42a2-4407-a5a0-df4976bde9f1.png)
+🌐 Demo: [https://satyaadil.github.io/Myweb](https://satyaadil.github.io/Myweb)  
+✍ Blog: [https://satya-blog.vercel.app](https://satya-blog.vercel.app)
 
-## Description
+---
 
-Hello! This is my own room made by Threejs + Typescript + Blender. I made it to introduce blog website in a cool way. You can check it out by visiting [https://bbangjo.kr](http://bbangjo.kr). Or, if you want to see only blog contents, please visit [https://blog.bbangjo.kr](http://blog.bbangjo.kr). Thank you for enjoying!
+## Deskripsi
 
+Halo! Ini adalah ruangan 3D hasil karya saya.  
+Di dalamnya saya menampilkan elemen personal dan link ke website saya.  
 
-Motivated by [https://henryheffernan.com](https://henryheffernan.com) and [Bruno Simon](https://github.com/brunosimon)
+Terinspirasi oleh [Bruno Simon](https://github.com/brunosimon) dan beberapa kreator 3D web.  
+
+---
 
 ## Demo
 
-![video](https://user-images.githubusercontent.com/51329156/207922867-cd8baee4-d8e2-488d-82b5-0302eb3a87fd.gif)
+![preview](./preview.gif)
 
-**BGM**: Soundtrack composed by AIVA (Artificial Intelligence Virtual Artist): https://www.aiva.ai
+🎵 **BGM**: Musik bebas hak cipta dari [Pixabay Music](https://pixabay.com/music/)  
 
-## TODO ✨  
-- [x] Apply texture
-- [x] Add Music
-- [ ] Optimize
-- [ ] Add decoration
+---
+
+## TODO ✨
+- [x] Terapkan tekstur
+- [x] Tambahkan musik
+- [ ] Optimisasi performa
+- [ ] Tambahkan dekorasi personal (misalnya foto, poster, logo AIN)
