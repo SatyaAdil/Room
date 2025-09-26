@@ -87,3 +87,5 @@ export default class Application {
     this.renderer.instance.dispose();
   }
 }
+
+// update
