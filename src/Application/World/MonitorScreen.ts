@@ -11,7 +11,7 @@ import {
   SCREEN_SIZE,
 } from "../Constants";
 import { CSS3DObject } from "three/examples/jsm/renderers/CSS3DRenderer.js";
-import EventEmitter from "../Utils/Eventemitter";
+import EventEmitter from "../Utils/EventEmitter";
 import { Mesh } from "three";
 
 // when event related to iframe occured, trigger evnt for camera
