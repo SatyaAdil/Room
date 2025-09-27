@@ -178,7 +178,7 @@ export default class MonitorScreen extends EventEmitter {
     iframe.style.opacity = "1";
     iframe.className = "jitter";
     iframe.id = "monitorScreen";
-    iframe.title = "bbangjo";
+    iframe.title = "StyDcode";
 
     // Add iframe to container
     container.appendChild(iframe);

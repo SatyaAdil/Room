@@ -20,7 +20,7 @@ export class DirectiveText extends BaseObject {
   }
   add() {
     this.fontLoader.load("/fonts/Rubik Vinyl_Regular.json", (font) => {
-      this.geometry = new TextGeometry("blog.bbangjo.kr", {
+      this.geometry = new TextGeometry("Welcome To Room StyDcode", {
         font,
         size: SCALE * 0.2,
         height: 2,

@@ -1,7 +1,7 @@
 import React from "react";
 import MuteToggle from "./MuteToggle";
 function Overlay() {
-  const githubLink = "https://github.com/bbangjooo/buffalo";
+  const githubLink = "https://github.com/SatyaAdil";
 
   return (
     <div style={styles.wrapper}>
