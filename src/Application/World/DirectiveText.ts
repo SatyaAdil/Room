@@ -15,9 +15,10 @@ export class DirectiveText extends BaseObject {
 
   constructor() {
     super();
-    this.position = new THREE.Vector3(-SCALE * 1.15, SCALE * 4.5, -SCALE);
+    this.position = new THREE.Vector3(-SCALE * 0.1, SCALE * 4.5, -SCALE);
     this.texture = this.resources.items.textTexture as LoadedTexture;
   }
+
   add() {
     this.fontLoader.load("/fonts/Rubik Vinyl_Regular.json", (font) => {
       this.geometry = new TextGeometry("Welcome To Room StyDcode", {
@@ -32,8 +33,11 @@ export class DirectiveText extends BaseObject {
         bevelSegments: 5,
       });
 
+      this.geometry.center();
+
       const material = new THREE.MeshMatcapMaterial({ matcap: this.texture });
       this.mesh = new THREE.Mesh(this.geometry, material);
+
       this.mesh.position.copy(this.position);
       this.scene.add(this.mesh);
     });

@@ -1,6 +1,6 @@
 import Application from "../Application";
 import Camera from "../Camera/Camera";
-import Resources from "../Utils/Resoures";
+import Resources from "../Utils/Resources";
 import Sizes from "../Utils/Sizes";
 import * as THREE from "three";
 import {

@@ -1,5 +1,5 @@
 import Application from "../Application";
-import Resources from "../Utils/Resoures";
+import Resources from "../Utils/Resources";
 import { DirectiveText } from "./DirectiveText";
 import Environment from "./Environment";
 import MonitorScreen from "./MonitorScreen";

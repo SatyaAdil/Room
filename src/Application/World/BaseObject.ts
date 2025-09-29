@@ -1,6 +1,6 @@
 import { LoadedModel } from "../../types";
 import Application from "../Application";
-import Resources from "../Utils/Resoures";
+import Resources from "../Utils/Resources";
 
 export abstract class BaseObject {
   application: Application = new Application();

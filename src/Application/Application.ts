@@ -4,11 +4,12 @@ import * as THREE from "three";
 import Renderer from "./Renderer";
 import Camera from "./Camera/Camera";
 import World from "./World/World";
-import Resources from "./Utils/Resoures";
+import Resources from "./Utils/Resources";
 import sources from "./sources";
 import Mouse from "./Utils/Mouse";
 import UI from "./UI";
 import { AudioPlayer } from "./AudioPlayer";
+import { CodeBackgrounds } from "./World/CodeBackgrounds"; // ✅ sudah ada
 
 let instance: Application | null = null;
 
@@ -24,6 +25,10 @@ export default class Application {
   world: World;
   ui: UI;
   audioPlayer: AudioPlayer;
+
+  // ✅ Tambahan properti untuk background
+  codeBg: CodeBackgrounds | null = null;
+
   constructor() {
     if (instance) {
       return instance;
@@ -43,6 +48,11 @@ export default class Application {
 
     this.audioPlayer = new AudioPlayer();
     // this.camera.setOrbitControls();
+
+    // ✅ SISIPKAN DI SINI: setelah scene dan camera siap
+    this.codeBg = new CodeBackgrounds(this.scene, this.camera.instance);
+    this.codeBg.add();
+
     this.sizes.on("resize", () => {
       this.resize();
     });
@@ -60,23 +70,21 @@ export default class Application {
     this.camera.update();
     this.world.update();
     this.renderer.update();
+
+    // ✅ SISIPKAN DI SINI: panggil background loop
+    if (this.codeBg) this.codeBg.update(this.time.delta);
   }
 
   destroy() {
     this.sizes.off("resize");
     this.time.off("tick");
 
-    // Traverse the whole scene
     this.scene.traverse((child) => {
-      // Test if it's a mesh
       if (child instanceof THREE.Mesh) {
         child.geometry.dispose();
 
-        // Loop through the material properties
         for (const key in child.material) {
           const value = child.material[key];
-
-          // Test if there is a dispose function
           if (value && typeof value.dispose === "function") {
             value.dispose();
           }
@@ -87,5 +95,3 @@ export default class Application {
     this.renderer.instance.dispose();
   }
 }
-
-// update

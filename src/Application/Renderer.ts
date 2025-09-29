@@ -1,7 +1,7 @@
 import Application from "./Application";
 import Sizes from "./Utils/Sizes";
 import * as THREE from "three";
-import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer";
+import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js"; 
 import { Scene } from "three";
 import Time from "./Utils/Time";
 import Camera from "./Camera/Camera";
