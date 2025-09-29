@@ -1,6 +1,5 @@
 import EventEmitter from "./EventEmitter";
 import Application from "../Application";
-
 export default class Mouse extends EventEmitter {
   x: number;
   y: number;
@@ -10,15 +9,18 @@ export default class Mouse extends EventEmitter {
   constructor() {
     super();
 
+    // Setup
     this.x = 0;
     this.y = 0;
     this.inComputer = false;
 
-    // ✅ pakai DOM listener, lalu trigger ke EventEmitter
-    window.addEventListener("mousemove", (event: MouseEvent) => {
-      this.x = event.clientX;
-      this.y = event.clientY;
-      this.trigger("move", { x: this.x, y: this.y });
+    // Resize event
+    this.on("mousemove", (event: any) => {
+      if (event.clientX && event.clientY) {
+        this.x = event.clientX;
+        this.y = event.clientY;
+      }
+      this.inComputer = event.inComputer ? true : false;
     });
   }
 }

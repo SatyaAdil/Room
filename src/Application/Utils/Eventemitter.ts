@@ -1,34 +1,26 @@
-type EventCallback = (...args: any[]) => any;
-
 export default class EventEmitter {
-  private callbacks: { [key: string]: EventCallback[] };
+  private listeners: { [key: string]: Function[] } = {}
 
-  constructor() {
-    this.callbacks = {};
+  on(event: string, callback: Function) {
+    if (!this.listeners[event]) {
+      this.listeners[event] = []
+    }
+    this.listeners[event].push(callback)
   }
 
-  on(name: string, callback: EventCallback) {
-    if (!(this.callbacks[name] instanceof Array)) {
-      this.callbacks[name] = [];
+  off(event: string, callback?: Function) {
+    if (!this.listeners[event]) return
+
+    if (!callback) {
+      // kalau callback tidak diberikan → hapus semua listener event ini
+      delete this.listeners[event]
+    } else {
+      this.listeners[event] = this.listeners[event].filter(fn => fn !== callback)
     }
-    this.callbacks[name].push(callback);
-    return this;
   }
 
-  off(name: string, callback?: EventCallback) {
-    if (this.callbacks[name] instanceof Array) {
-      if (callback) {
-        this.callbacks[name] = this.callbacks[name].filter(cb => cb !== callback);
-      } else {
-        delete this.callbacks[name];
-      }
-    }
-    return this;
-  }
-
-  trigger(name: string, ...args: any[]) {
-    if (this.callbacks[name] instanceof Array) {
-      this.callbacks[name].forEach(cb => cb(...args));
-    }
+  trigger(event: string, ...args: any[]) {
+    if (!this.listeners[event]) return
+    this.listeners[event].forEach(callback => callback(...args))
   }
 }
