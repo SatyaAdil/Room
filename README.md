@@ -16,20 +16,32 @@ Inspirasi datang dari karya Bruno Simon dan beberapa kreator web 3D lainnya.
 
 ## Preview
 
+<<<<<<< HEAD
 ![Preview Animasi](./assets/Pc.gif)
 
 ## Screenshot Landing Page
 
 ![Landing Page](./assets/Pc.png)
+=======
+![preview](./preview.gif)  
+*(tambahkan screenshot landing page di sini)*
+>>>>>>> 4df077e (Update README.md)
 
 ---
 
 ## Teknologi
 
+<<<<<<< HEAD
 - **Three.js** – rendering 3D  
 - **TypeScript** – struktur kode yang lebih terjaga  
 - **Blender** – pembuatan dan export model 3D  
 - **Netlify** – deployment & hosting  
+=======
+- Three.js – rendering 3D  
+- TypeScript – struktur kode yang lebih terjaga  
+- Blender – pembuatan dan export model 3D  
+- Netlify – deployment & hosting  
+>>>>>>> 4df077e (Update README.md)
 
 ---
 
@@ -53,6 +65,7 @@ Inspirasi datang dari karya Bruno Simon dan beberapa kreator web 3D lainnya.
 
 ## Lisensi
 
+<<<<<<< HEAD
 Copyright (c) 2025 Satya Adil Faishal
 All rights reserved.
 
@@ -60,3 +73,7 @@ Unauthorized copying, modification, distribution, or use of this project,
 via any medium, is strictly prohibited without the prior written permission 
 of the author.
 
+=======
+Proyek ini dirilis dengan lisensi **MIT**.  
+Silakan gunakan kembali dengan menyertakan atribusi.
+>>>>>>> 4df077e (Update README.md)
