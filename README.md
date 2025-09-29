@@ -1,32 +1,57 @@
 # SatyaRoom
 
-Proyek ini adalah ruangan virtual 3D yang dibuat dengan **Three.js + TypeScript + Blender**.  
-Saya buat sebagai cara unik untuk memperkenalkan website/blog saya.  
+SatyaRoom adalah proyek **ruangan virtual 3D interaktif** yang dibuat dengan **Three.js**, **TypeScript**, dan **Blender**.  
+Proyek ini saya kembangkan sebagai landing page kreatif untuk memperkenalkan website dan blog pribadi.  
 
-🌐 Demo: [https://satyaadil.github.io/Myweb](https://satyaadil.github.io/Myweb)  
-✍ Blog: [https://satya-blog.vercel.app](https://satya-blog.vercel.app)
+🔗 Live demo: [roomstydcode.netlify.app](https://roomstydcode.netlify.app/)
 
 ---
 
 ## Deskripsi
 
-Halo! Ini adalah ruangan 3D hasil karya saya.  
-Di dalamnya saya menampilkan elemen personal dan link ke website saya.  
-
-Terinspirasi oleh [Bruno Simon](https://github.com/brunosimon) dan beberapa kreator 3D web.  
+Ruangan ini menampilkan elemen personal sekaligus link navigasi menuju website saya.  
+Inspirasi datang dari karya Bruno Simon dan beberapa kreator web 3D lainnya.  
 
 ---
 
-## Demo
+## Preview
 
-![preview](./preview.gif)
+![Preview Animasi](./assets/Pc.gif)
 
-🎵 **BGM**: Musik bebas hak cipta dari [Pixabay Music](https://pixabay.com/music/)  
+## Screenshot Landing Page
+
+![Landing Page](./assets/Pc.png)
 
 ---
 
-## TODO ✨
-- [x] Terapkan tekstur
-- [x] Tambahkan musik
-- [ ] Optimisasi performa
-- [ ] Tambahkan dekorasi personal (misalnya foto, poster, logo AIN)
+## Teknologi
+
+- **Three.js** – rendering 3D  
+- **TypeScript** – struktur kode yang lebih terjaga  
+- **Blender** – pembuatan dan export model 3D  
+- **Netlify** – deployment & hosting  
+
+---
+
+## Fitur
+
+- Ruangan 3D interaktif  
+- Tekstur dan dekorasi personal  
+- Musik latar dari [Pixabay Music](https://pixabay.com/music/)  
+- Navigasi link ke website/blog  
+
+---
+
+## Rencana Pengembangan
+
+- [x] Implementasi tekstur  
+- [x] Tambah musik latar  
+- [ ] Optimisasi performa (loading lebih cepat)  
+- [ ] Dekorasi tambahan (foto, poster, logo AIN, dll.)  
+
+---
+
+## Lisensi
+
+Proyek ini dirilis dengan lisensi **MIT**.  
+Silakan gunakan kembali dengan menyertakan atribusi.
