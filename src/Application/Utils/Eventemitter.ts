@@ -1,42 +1,34 @@
+type EventCallback = (...args: any[]) => any;
+
 export default class EventEmitter {
-  callbacks: { [key in string]: (() => any)[] };
+  private callbacks: { [key: string]: EventCallback[] };
+
   constructor() {
     this.callbacks = {};
   }
 
-  on(name: string, callback: (...args: any[]) => any) {
-    if (!(this.callbacks[name] instanceof Array))
+  on(name: string, callback: EventCallback) {
+    if (!(this.callbacks[name] instanceof Array)) {
       this.callbacks[name] = [];
-
+    }
     this.callbacks[name].push(callback);
-
     return this;
   }
 
-  off(name: string) {
+  off(name: string, callback?: EventCallback) {
     if (this.callbacks[name] instanceof Array) {
-      delete this.callbacks[name];
+      if (callback) {
+        this.callbacks[name] = this.callbacks[name].filter(cb => cb !== callback);
+      } else {
+        delete this.callbacks[name];
+      }
     }
     return this;
   }
 
-  trigger(name: string, _args?: any[]) {
-    const triggerContext = this;
-    let finalResult: any = null;
-    let result = null;
-
-    const args: any = !(_args instanceof Array) ? [] : _args;
-
+  trigger(name: string, ...args: any[]) {
     if (this.callbacks[name] instanceof Array) {
-      this.callbacks[name].forEach(function (callback) {
-        result = callback.apply(triggerContext, args);
-
-        if (typeof finalResult === "undefined") {
-          finalResult = result;
-        }
-      });
+      this.callbacks[name].forEach(cb => cb(...args));
     }
-
-    return finalResult;
   }
 }
