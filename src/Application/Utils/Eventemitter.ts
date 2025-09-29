@@ -1,26 +1,33 @@
 export default class EventEmitter {
-  private listeners: { [key: string]: Function[] } = {}
+  private callbacks: { [key: string]: Function[] } = {};
 
   on(event: string, callback: Function) {
-    if (!this.listeners[event]) {
-      this.listeners[event] = []
+    if (!this.callbacks[event]) {
+      this.callbacks[event] = [];
     }
-    this.listeners[event].push(callback)
+    this.callbacks[event].push(callback);
+    return this;
   }
 
   off(event: string, callback?: Function) {
-    if (!this.listeners[event]) return
-
-    if (!callback) {
-      // kalau callback tidak diberikan → hapus semua listener event ini
-      delete this.listeners[event]
+    if (!this.callbacks[event]) return this;
+    
+    if (callback) {
+      this.callbacks[event] = this.callbacks[event].filter(
+        cb => cb !== callback
+      );
     } else {
-      this.listeners[event] = this.listeners[event].filter(fn => fn !== callback)
+      delete this.callbacks[event];
     }
+    return this;
   }
 
   trigger(event: string, ...args: any[]) {
-    if (!this.listeners[event]) return
-    this.listeners[event].forEach(callback => callback(...args))
+    if (!this.callbacks[event]) return this;
+    
+    this.callbacks[event].forEach(callback => {
+      callback(...args);
+    });
+    return this;
   }
 }
