@@ -53,5 +53,10 @@ Inspirasi datang dari karya Bruno Simon dan beberapa kreator web 3D lainnya.
 
 ## Lisensi
 
-Proyek ini dirilis dengan lisensi **MIT**.  
-Silakan gunakan kembali dengan menyertakan atribusi.
+Copyright (c) 2025 Satya Adil Faishal
+All rights reserved.
+
+Unauthorized copying, modification, distribution, or use of this project, 
+via any medium, is strictly prohibited without the prior written permission 
+of the author.
+
